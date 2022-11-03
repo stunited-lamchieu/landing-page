@@ -8,6 +8,7 @@ import {
   BsNewspaper,
   BsStar,
   BsStars,
+  BsChevronDoubleDown,
 } from 'react-icons/bs';
 
 export const Hello = () => {
@@ -57,6 +58,9 @@ export const Hello = () => {
             <BsNewspaper />
           </a>
         </Link>
+      </div>
+      <div className="scroll_down">
+        <BsChevronDoubleDown />
       </div>
     </div>
   );

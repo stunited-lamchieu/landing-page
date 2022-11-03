@@ -52,10 +52,10 @@
         &::after {
           content: '';
           position: absolute;
-          top: -0.1em;
-          right: 0.05em;
-          width: 0.4em;
-          height: 0.4em;
+          top: -1px;
+          right: -5px;
+          width: 30px;
+          height: 20px;
           background: radial-gradient(
               white 3%,
               rgba(white, 0.3) 15%,
@@ -110,7 +110,6 @@
     }
   }
   .shake {
-    width: 40%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -180,33 +179,49 @@
       left: -50px;
       font-size: 30px;
       color: yellow;
+      animation: star 2s linear infinite;
+      @keyframes star {
+        0% {
+          top: calc(50% - 10px);
+          left: -60px;
+        }
+        50% {
+          top: calc(50% - 0px);
+          left: -50px;
+        }
+        100% {
+          top: calc(50% - 10px);
+          left: -60px;
+        }
+      }
     }
     .small_star {
       border-radius: 100rem;
       position: absolute;
       top: 40%;
       right: -60px;
-      animation: circle 3s linear infinite;
-    }
-    @keyframes circle {
-      0% {
-        width: 10px;
-        height: 10px;
-      }
-      50% {
-        width: 30px;
-        height: 30px;
-      }
-      100% {
-        width: 10px;
-        height: 10px;
+      animation: small_star 3s linear infinite;
+
+      @keyframes small_star {
+        0% {
+          width: 10px;
+          height: 10px;
+        }
+        50% {
+          width: 30px;
+          height: 30px;
+        }
+        100% {
+          width: 10px;
+          height: 10px;
+        }
       }
     }
   }
   .social {
-    position: absolute;
+    position: fixed;
     left: 100px;
-    bottom: 100px;
+    bottom: 60px;
     display: flex;
     gap: 20px;
     > a {
@@ -217,14 +232,39 @@
       align-items: center;
       padding: 5px;
       border-radius: 4px;
-      border: 1px solid;
-      border-image-slice: 1;
+      border: 1px solid purple;
       color: #fff;
-      border-image-source: linear-gradient(to right bottom, #f62682, #6a5af9);
+    }
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      left: 10px;
+      bottom: 10px;
+    }
+  }
+
+  .scroll_down {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+    font-size: 25px;
+    animation: fadeUp 1s linear infinite;
+    @keyframes fadeUp {
+      0% {
+        bottom: 30px;
+      }
+      50% {
+        bottom: 20px;
+      }
+      100% {
+        bottom: 30px;
+      }
     }
   }
   @media screen and (max-width: 1024px) {
-    .shake {
+    flex-direction: column;
+    justify-content: space-around;
+    .wrapper {
       .img_wrap {
         width: 200px;
         height: 200px;
