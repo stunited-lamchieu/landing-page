@@ -55,7 +55,7 @@
 }
 
 .activeDot::after {
-  content: "";
+  content: '';
   display: block;
   margin: 0 auto;
   width: 1px;
@@ -98,4 +98,3 @@
     filter: invert(1);
   }
 } */
-

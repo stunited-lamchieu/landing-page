@@ -1,7 +1,7 @@
-import Image from 'next/image';
-import logo from '../assets/logo.png';
-import Typed from 'react-typed';
-import Link from 'next/link';
+import Image from 'next/image'
+import logo from '../assets/logo.png'
+import Typed from 'react-typed'
+import Link from 'next/link'
 import {
   BsFacebook,
   BsLinkedin,
@@ -9,7 +9,7 @@ import {
   BsStar,
   BsStars,
   BsChevronDoubleDown,
-} from 'react-icons/bs';
+} from 'react-icons/bs'
 
 export const Hello = () => {
   return (
@@ -63,5 +63,5 @@ export const Hello = () => {
         <BsChevronDoubleDown />
       </div>
     </div>
-  );
-};
+  )
+}

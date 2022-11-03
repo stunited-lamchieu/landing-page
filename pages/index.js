@@ -1,47 +1,47 @@
-import Head from "next/head";
-import styles from "../styles/Home.module.css";
-import { useRef, useEffect, useState } from "react";
+import Head from 'next/head'
+import styles from '../styles/Home.module.css'
+import { useRef, useEffect, useState } from 'react'
 // import '../styles/navigation.scss'
-import "bootstrap/dist/css/bootstrap.min.css";
-import { Hello } from "./hello";
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { Hello } from './hello'
 
 const Home = () => {
-  const navi = ["Home", "About", "Blog"];
+  const navi = ['Home', 'About', 'Blog']
 
-  const [navigation, setNavigation] = useState("Home");
+  const [navigation, setNavigation] = useState('Home')
 
   useEffect(() => {
-    const window_height = window.innerHeight;
+    const window_height = window.innerHeight
     navi.map((nav, index) => {
       if (nav === navigation) {
-        console.log("nav1", navigation);
+        console.log('nav1', navigation)
         window.scrollTo({
           top: window_height * index,
-          behavior: "smooth",
-        });
+          behavior: 'smooth',
+        })
       }
-    });
-  }, [navi, navigation]);
+    })
+  }, [navi, navigation])
 
   useEffect(() => {
     const setDotStatus = () => {
-      const scroll_position = window.scrollY;
-      const window_height = window.innerHeight;
-      const half_window = window.innerHeight / 2;
+      const scroll_position = window.scrollY
+      const window_height = window.innerHeight
+      const half_window = window.innerHeight / 2
       navi.map((nav, index) => {
         if (
           scroll_position > window_height * index - half_window &&
           scroll_position < window_height * index + half_window
         ) {
-          console.log("nav2", navigation);
-          setNavigation(nav);
+          console.log('nav2', navigation)
+          setNavigation(nav)
         }
-      });
-    };
-    window.addEventListener("scroll", setDotStatus);
+      })
+    }
+    window.addEventListener('scroll', setDotStatus)
 
-    return () => window.removeEventListener("scroll", setDotStatus);
-  });
+    return () => window.removeEventListener('scroll', setDotStatus)
+  })
   return (
     <div className={styles.container}>
       <Head>
@@ -57,7 +57,7 @@ const Home = () => {
               <li
                 key={index}
                 onClick={() => setNavigation(item)}
-                className={navigation === item ? "active" : ""}
+                className={navigation === item ? 'active' : ''}
               >
                 {item}
                 <span></span>
@@ -83,7 +83,7 @@ const Home = () => {
         </div>
       </main>
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

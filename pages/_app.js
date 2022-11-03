@@ -1,9 +1,9 @@
-import "../styles/globals.css";
-import "../styles/navigation.scss";
-import "../styles/_hello.scss";
+import '../styles/globals.css'
+import '../styles/navigation.scss'
+import '../styles/_hello.scss'
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />;
+  return <Component {...pageProps} />
 }
 
-export default MyApp;
+export default MyApp
