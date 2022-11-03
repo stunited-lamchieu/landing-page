@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');
 .hero {
   display: flex;
   align-items: center;
@@ -6,97 +6,107 @@
   min-height: 100vh;
   overflow: hidden;
   position: relative;
-  .heading {
+  .wrapper {
     width: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    .waviy {
-      position: relative;
-      -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
-      font-size: 30px;
 
-      span {
+    .heading {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      perspective: 100vh;
+      font-size: clamp(10px, 2vw, 20px);
+
+      .waviy {
         position: relative;
-        display: inline-block;
-        color: #fff;
-        animation: waviy 4.4s infinite;
-        user-select: none;
-        @for $i from 1 to 23 {
-          &:nth-child(#{$i}) {
-            animation-delay: calc(0.1s * $i);
+        -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0, 0, 0, 0.2));
+        font-size: 30px;
+
+        span {
+          position: relative;
+          display: inline-block;
+          color: #fff;
+          animation: waviy 4.2s infinite;
+          user-select: none;
+          @for $i from 1 to 23 {
+            &:nth-child(#{$i}) {
+              animation-delay: calc(0.1s * $i);
+            }
           }
         }
       }
-    }
 
-    h1 {
-      position: relative;
-      font-family: "Mochiy Pop One", sans-serif;
-      font-size: 70px;
-      margin: 0;
-      transform: skew(-15deg);
-      letter-spacing: 3px;
-      user-select: none;
+      h1 {
+        position: relative;
+        font-family: 'Mochiy Pop One', sans-serif;
+        font-size: 70px;
+        margin: 0;
+        transform: skew(-15deg);
+        letter-spacing: 3px;
+        user-select: none;
 
-      &::after {
-        content: "";
-        position: absolute;
-        top: -0.1em;
-        right: 0.05em;
-        width: 0.4em;
-        height: 0.4em;
-        background: radial-gradient(
-            white 3%,
-            rgba(white, 0.3) 15%,
-            rgba(white, 0.05) 60%,
-            transparent 80%
+        &::after {
+          content: '';
+          position: absolute;
+          top: -0.1em;
+          right: 0.05em;
+          width: 0.4em;
+          height: 0.4em;
+          background: radial-gradient(
+              white 3%,
+              rgba(white, 0.3) 15%,
+              rgba(white, 0.05) 60%,
+              transparent 80%
+            ),
+            radial-gradient(rgba(white, 0.2) 50%, transparent 60%) 50% 50% / 5%
+              100%,
+            radial-gradient(rgba(white, 0.2) 50%, transparent 60%) 50% 50% / 70%
+              5%;
+          background-repeat: no-repeat;
+        }
+
+        span {
+          display: block;
+          text-transform: uppercase;
+          background: linear-gradient(#3d73eb, #f08fff 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+
+      .grid {
+        $main: #7d41e6;
+        $glow: rgba(#2e26ff, 0.4);
+        background: linear-gradient(
+            transparent 65%,
+            $glow 75%,
+            $main 80%,
+            $glow 85%,
+            transparent 95%
           ),
-          radial-gradient(rgba(white, 0.2) 50%, transparent 60%) 50% 50% / 5%
-            100%,
-          radial-gradient(rgba(white, 0.2) 50%, transparent 60%) 50% 50% / 70%
-            5%;
-        background-repeat: no-repeat;
-      }
-
-      span {
-        display: block;
-        text-transform: uppercase;
-        background: linear-gradient(#3d73eb, #f08fff 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-    }
-
-    .grid {
-      $main: #7d41e6;
-      $glow: rgba(#2e26ff, 0.4);
-      background: linear-gradient(
-          transparent 65%,
-          $glow 75%,
-          $main 80%,
-          $glow 85%,
-          transparent 95%
-        ),
-        linear-gradient(
-          90deg,
-          transparent 65%,
-          $glow 75%,
-          $main 80%,
-          $glow 85%,
-          transparent 95%
+          linear-gradient(
+            90deg,
+            transparent 65%,
+            $glow 75%,
+            $main 80%,
+            $glow 85%,
+            transparent 95%
+          );
+        background-size: 30px 30px;
+        width: 200vw;
+        height: 150vh;
+        position: absolute;
+        bottom: -120vh;
+        transform: rotateX(-100deg);
+        -webkit-mask-image: linear-gradient(
+          rgba(0, 0, 0, 1),
+          rgba(0, 0, 0, 0) 80%
         );
-      background-size: 30px 30px;
-      width: 200vw;
-      height: 150vh;
-      position: absolute;
-      bottom: -120vh;
-      transform: rotateX(-100deg);
-      -webkit-mask-image: linear-gradient(
-        rgba(0, 0, 0, 1),
-        rgba(0, 0, 0, 0) 80%
-      );
+      }
     }
   }
   .shake {
@@ -119,7 +129,7 @@
     }
 
     .img_wrap::before {
-      content: "";
+      content: '';
       position: absolute;
       height: 100%;
       width: 100%;
@@ -132,7 +142,7 @@
     }
 
     .img_wrap::after {
-      content: "";
+      content: '';
       position: absolute;
       height: 100%;
       width: 100%;
@@ -164,22 +174,17 @@
       left: calc(100% + 10px);
       bottom: 15px;
     }
-    .circle_1 {
-      width: 30px;
-      height: 30px;
-      border-radius: 100rem;
-      border: 1px solid #fff;
+    .star {
       position: absolute;
       top: 50%;
-      left: -60px;
+      left: -50px;
+      font-size: 30px;
+      color: yellow;
     }
-    .circle_2 {
-      width: 30px;
-      height: 30px;
+    .small_star {
       border-radius: 100rem;
-      border: 1px solid #fff;
       position: absolute;
-      top: 50%;
+      top: 40%;
       right: -60px;
       animation: circle 3s linear infinite;
     }
@@ -204,6 +209,19 @@
     bottom: 100px;
     display: flex;
     gap: 20px;
+    > a {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 5px;
+      border-radius: 4px;
+      border: 1px solid;
+      border-image-slice: 1;
+      color: #fff;
+      border-image-source: linear-gradient(to right bottom, #f62682, #6a5af9);
+    }
   }
   @media screen and (max-width: 1024px) {
     .shake {
