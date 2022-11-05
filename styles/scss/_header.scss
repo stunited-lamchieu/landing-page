@@ -1,0 +1,15 @@
+@use "../custom" as *;
+
+
+header {
+    margin: 30px;
+}
+
+.btn-contact {
+  background-image: linear-gradient(to right, #3d73eb, #de8fff 100%);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  color: #ffffff;
+  font-weight: 500;
+  border-radius: 7px;
+}

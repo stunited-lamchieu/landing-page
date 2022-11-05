@@ -1,0 +1,68 @@
+@use "../custom" as *;
+
+body {
+  position: relative;
+  background-color: #06072b;
+  color: #ffffff;
+}
+
+.scrollspy-example {
+  position: relative;
+  height: 30vh;
+  overflow: auto;
+}
+
+.navigation {
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  counter-reset: number;
+  margin: 0 20px;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    li {
+      padding: 9px 0;
+      position: relative;
+
+      span {
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        height: 40px;
+        right: 0;
+      }
+
+      a {
+        color: #ffffff;
+
+        &:before {
+          content: "0" counter(number);
+          counter-increment: number;
+          display: block;
+          font-size: 14px;
+        }
+
+        &:hover {
+          color: #ffffff;
+        }
+
+        &.active {
+          background-color: #ffffff !important;
+          color: #000 !important;
+        }
+      }
+    }
+  }
+}
