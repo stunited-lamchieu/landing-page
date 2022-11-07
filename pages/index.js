@@ -1,11 +1,12 @@
 import Image from "next/image";
 import logo from "../images/logo.png";
+import Contact from "../components/Contact";
 
 const Home = () => {
   const navigations = [
     { name: "Home", href: "#scrollspyHeading1" },
     { name: "About", href: "#scrollspyHeading2" },
-    { name: "Services", href: "#scrollspyHeading3" },
+    { name: "Services", href: "#contact" },
   ];
 
   const removeDotStyles = () => {
@@ -31,17 +32,19 @@ const Home = () => {
   };
 
   return (
-    <div className="container-fluid text-center">
-      <header className="d-flex justify-content-between">
-        <div
-          className="logo"
-          style={{ width: "100px", height: "100px", position: "relative" }}
-        >
+    <div
+      className="container-fluid scrollspy-example  p-3 rounded-2 "
+      data-bs-spy="scroll"
+      data-bs-target="#navbar-example2"
+      data-bs-root-margin="0px 0px -40%"
+      data-bs-smooth-scroll="true"
+      tabIndex="0"
+    >
+      <header className="header d-flex justify-content-between align-items-center">
+        <div className="header__logo">
           <Image src={logo} alt="logo" layout="fill" />
         </div>
-        <div className="contact">
-          <button className="btn-contact">Contact Us</button>
-        </div>
+        <button className="header__contact">Contact Us</button>
       </header>
       <div className="row">
         <div className="col-2">
@@ -49,7 +52,9 @@ const Home = () => {
             <ul id="js-dots" className="nav nav-pills" onClick={setDotStyles}>
               {navigations.map((item, index) => (
                 <li key={index} className={index == 0 ? "active" : ""}>
-                  <a className="nav-link" href={item.href}></a>
+                  <a className="nav-link" href={item.href}>
+                    {item.name}
+                  </a>
                 </li>
               ))}
             </ul>
@@ -57,28 +62,12 @@ const Home = () => {
         </div>
         <div className="col-10">
           <div
-            data-bs-spy="scroll"
-            data-bs-target="#navbar-example2"
-            data-bs-root-margin="0px 0px -40%"
-            data-bs-smooth-scroll="true"
-            className="scrollspy-example  p-3 rounded-2"
-            tabIndex="0"
+           
           >
-            <div id="home"></div>
-            <div id="about"></div>
-            <div id="service"></div>
-            <div id="project"></div>
-            <div id="contact"></div>
-            <h4 id="scrollspyHeading1">First heading</h4>
+            <div id="scrollspyHeading1">First heading</div>
             <p>...</p>
-            <h4 id="scrollspyHeading2">Second heading</h4>
-            <p>...</p>
-            <h4 id="scrollspyHeading3">Third heading</h4>
-            <p>...</p>
-            <h4 id="scrollspyHeading4">Fourth heading</h4>
-            <p>...</p>
-            <h4 id="scrollspyHeading5">Fifth heading</h4>
-            <p>...</p>
+            <div id="scrollspyHeading2">Second heading</div>
+            <Contact id="contact" />
           </div>
         </div>
       </div>
