@@ -1,16 +1,22 @@
 @use "../custom" as *;
 
 .header {
-  // position: fixed;
-  // top: 0;
-  // width: 100%;
-  .header__logo {
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  background: rgb(17 21 41 / 70%);
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  padding: 2% 52px;
+
+  &__logo {
     width: 4rem;
     height: 4rem;
     position: relative;
   }
 
-  .header__contact {
+  &__contact {
     background-image: linear-gradient(to right, #3d73eb, #de8fff 100%);
     border: none;
     padding: 0.6rem 1.2rem;
@@ -19,4 +25,3 @@
     border-radius: 7px;
   }
 }
-

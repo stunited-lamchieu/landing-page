@@ -1,135 +1,79 @@
 @use "../custom" as *;
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+input,
+textarea,
+select,
+button {
+  outline: none;
+}
+
+input {
+  line-height: normal;
+}
+
+label,
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
 body {
   position: relative;
   background-color: #06072b;
   color: #ffffff;
 }
 
-.scrollspy-example {
+.scrollspy {
   position: relative;
   height: 100vh;
   overflow: auto;
 }
 
-#scrollspyHeading1,
-#scrollspyHeading2,
-#contact {
+.section {
   height: 100vh;
 }
 
-.navigation {
-  width: fit-content;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  counter-reset: number;
-  margin: 0 20px;
+@import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap");
 
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-
-    li {
-      padding: 9px 0;
-      position: relative;
-
-      span {
-        display: block;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        height: 40px;
-        right: 0;
-      }
-
-      a {
-        color: #ffffff;
-
-        &:hover {
-          color: #ffffff;
-        }
-
-        &.active {
-          background-color: #ffffff !important;
-          color: #000 !important;
-        }
-      }
-    }
+@keyframes waviy {
+  0%,
+  40%,
+  100% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-20px);
   }
 }
 
-.contact__info {
-  position: relative;
-  height: 100%;
-
-  &::before {
-    content: "";
-    border-top: 1px solid #ffffff3d;
-    border-bottom: 1px solid #ffffff3d;
-    width: 96.2%;
-    height: 100%;
-    position: absolute;
-    transform: translateX(-50%);
-    left: 50%;
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
   }
-
-  &::after {
-    content: "";
-    border-left: 1px solid #ffffff3d;
-    width: 100%;
-    height: 94%;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
+  50% {
+    transform: rotate(-10deg);
+    transform-origin: top left;
   }
-}
-
-.contact__form {
-  position: relative;
-  height: 50vh;
-
-  .send-data {
-    position: absolute;
-    z-index: 1;
+  100% {
+    transform: rotate(0deg);
   }
-
-  &::before {
-    content: "";
-    border-top: 1px solid #ffffff3d;
-    border-bottom: 1px solid #ffffff3d;
-    width: 98%;
-    height: 100%;
-    position: absolute;
-    transform: translateX(-50%);
-    left: 50%;
-  }
-
-  &::after {
-    content: "";
-    border-left: 1px solid #ffffff3d;
-    border-right: 1px solid #ffffff3d;
-    width: 100%;
-    height: 95%;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-  }
-}
-
-.contact__title {
-  text-transform: uppercase;
-  background: linear-gradient(#3d73eb, #f08fff 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: bold;
 }

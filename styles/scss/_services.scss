@@ -1,0 +1,24 @@
+@use "../custom" as *;
+
+.container-fluid {
+  .title {
+    font-size: 20px;
+  }
+  .here {
+    background: -webkit-linear-gradient(60deg, #3d73eb 13.4%, #de8fff 86.6%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .icon-container {
+    background-color: #211c5e;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    width: 3rem;
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    align-items: center;
+    stroke: #fff;
+  }
+}

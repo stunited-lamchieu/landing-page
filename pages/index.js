@@ -1,74 +1,83 @@
-import Image from "next/image";
-import logo from "../images/logo.png";
 import Contact from "../components/Contact";
+import Introduce from "../components/Introduce";
+import Header from "../components/Header";
+import Sidebar from "../components/Sidebar";
+import About from "../components/About";
+import Services from "../components/Services";
+import { BsFillArchiveFill } from "react-icons/bs";
+import { MdWebAsset } from "react-icons/md";
+import { AiOutlineMobile, AiOutlineTeam } from "react-icons/ai"
+import { SiBmcsoftware } from "react-icons/si"
+import { MdOutlineCampaign } from "react-icons/md"
+import { GrStreetView } from "react-icons/gr"
 
 const Home = () => {
   const navigations = [
-    { name: "Home", href: "#scrollspyHeading1" },
-    { name: "About", href: "#scrollspyHeading2" },
-    { name: "Services", href: "#contact" },
+    { name: "Home", href: "#introduce" },
+    { name: "About", href: "#about" },
+    { name: "Services", href: "#services" },
+    { name: "Projects", href: "#project" },
+    { name: "Contact", href: "#contact" },
   ];
 
-  const removeDotStyles = () => {
-    const navigation = document.querySelector("#js-dots");
-    const dots = navigation;
-    const is_active = dots.querySelector(".active");
-
-    if (is_active != null) {
-      is_active.classList.remove("active");
-    }
-  };
-
-  const setDotStyles = (e) => {
-    const navigation = document.querySelector("#js-dots");
-    const dots = navigation.children;
-    const dot = Object.values(dots);
-    dot.map((item, index) => {
-      if (item === e.target.parentElement) {
-        removeDotStyles();
-        item.classList.add("active");
-      }
-    });
-  };
+  const services = [
+    {
+      icon: <MdWebAsset className="icon" />,
+      title: "Web App Development",
+      content:
+        "We create beautifully designed web apps precisely tailored to your situationWe deliver web systems of any size and complexity — from budding startup products to hi-end enterprise solutions.",
+    },
+    {
+      icon: <AiOutlineMobile className="icon" />,
+      title: "Mobile App Development",
+      content:
+        "ST provides custom mobile application development across different platforms such as iOS and Android for consumer-facing and enterprise environment.",
+    },
+    {
+      icon: <SiBmcsoftware className="icon" />,
+      title: "Custom Software Development",
+      content:
+        "ST provides high quality, cost-effective and reliable software development services match your specific needs, budget and timeframe. We love to competes with other firms on the grounds of quality, creativity, n' dedication.",
+    },
+    {
+      icon: <AiOutlineTeam className="icon" />,
+      title: "Dedicated Team",
+      content:
+        "Looking for the best resources to compliment your existing team? Our talented developers are available to augment your team on a short or long term basis.",
+    },
+    {
+      icon: <MdOutlineCampaign className="icon" />,
+      title: "Digital Marketing",
+      content:
+        "From establishing your online presence to increasing your influence on social, we use smart analytics to help you grow your business.",
+    },
+    {
+      icon: <GrStreetView className="icon" />,
+      title: "Startup Incubation",
+      content:
+        "Our program provides a vast resources for entrepreneurs in Vietnam, focusing on ecosystem building, co-working spaces and incubation programs",
+    },
+  ];
 
   return (
     <div
-      className="container-fluid scrollspy-example  p-3 rounded-2 "
+      className="container-fluid scrollspy  p-3 rounded-2 "
       data-bs-spy="scroll"
       data-bs-target="#navbar-example2"
       data-bs-root-margin="0px 0px -40%"
       data-bs-smooth-scroll="true"
       tabIndex="0"
     >
-      <header className="header d-flex justify-content-between align-items-center">
-        <div className="header__logo">
-          <Image src={logo} alt="logo" layout="fill" />
-        </div>
-        <button className="header__contact">Contact Us</button>
-      </header>
+      <Header />
       <div className="row">
-        <div className="col-2">
-          <nav id="navbar-example2" className="navbar  px-3 mb-3 navigation">
-            <ul id="js-dots" className="nav nav-pills" onClick={setDotStyles}>
-              {navigations.map((item, index) => (
-                <li key={index} className={index == 0 ? "active" : ""}>
-                  <a className="nav-link" href={item.href}>
-                    {item.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </nav>
+        <div className="col-2 d-flex ">
+          <Sidebar navigations={navigations} />
         </div>
         <div className="col-10">
-          <div
-           
-          >
-            <div id="scrollspyHeading1">First heading</div>
-            <p>...</p>
-            <div id="scrollspyHeading2">Second heading</div>
-            <Contact id="contact" />
-          </div>
+          <Introduce id="introduce" className="section" />
+          <About id="about" />
+          <Services id="services" services={services} />
+          <Contact id="contact" className="section" />
         </div>
       </div>
 
