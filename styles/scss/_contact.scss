@@ -1,7 +1,13 @@
 .contact {
-  &__title {
-    padding: 2rem 0;
+  p {
+    padding-top: 2rem;
+  }
 
+  input {
+    height: 5vh;
+  }
+
+  &__title {
     span {
       text-transform: uppercase;
       background: linear-gradient(60deg, #3d73eb 13.4%, #de8fff 86.6%);
@@ -12,13 +18,7 @@
 
   &__info {
     position: relative;
-    height: 30vh;
-
-    p {
-      &:first-child {
-        padding-top: 2rem;
-      }
-    }
+    height: fit-content;
 
     &::before {
       content: "";
@@ -45,10 +45,9 @@
 
   &__form {
     position: relative;
-    height: 60vh;
+    height: fit-content;
 
     .send__data {
-      position: absolute;
       z-index: 1;
 
       .button__submit {
@@ -58,6 +57,24 @@
         color: #ffffff;
         font-weight: 500;
         border-radius: 7px;
+        margin: 4rem 0 2rem 0;
+      }
+
+      label {
+        padding: 2rem 0;
+      }
+
+      .input {
+        background-color: #0f1836;
+        border: none;
+        outline: none;
+        color: #fff;
+        border-radius: 5px;
+        padding: 1rem;
+      }
+
+      textarea {
+        height: 15vh;
       }
     }
 
@@ -70,6 +87,7 @@
       position: absolute;
       transform: translateX(-50%);
       left: 50%;
+      z-index: -1;
     }
 
     &::after {
@@ -82,14 +100,7 @@
       top: 50%;
       left: 0;
       transform: translateY(-50%);
+      z-index: -1;
     }
   }
-}
-
-.input {
-  background-color: #0f1836;
-  border: none;
-  outline: none;
-  color: #fff;
-  border-radius: 5px;
 }

@@ -1,30 +1,29 @@
-import nodemailer from "nodemailer";
+const nodemailer = require("nodemailer");
 
-// eslint-disable-next-line import/no-anonymous-default-export
-export default async (req, res) => {
-  const { name, email, message } = req.body;
-  const transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
+export default function handler(req, res) {
+  let transporter = nodemailer.createTransport({
     port: 465,
-    secure: true,
+    host: "smtp.gmail.com",
     auth: {
-      user: process.env.SMTP_USER,
-      pass: process.env.SMTP_PASSWORD
-    }
+      user: "chieu.dang@stunited.vn",
+      pass: "Lamchieu99@",
+    },
+    secure: true,
   });
 
-  try {
-    await transporter.sendMail({
-      from: email,
-      to: "example@gmail.com",
-      subject: `Contact form submission from ${name}`,
-      html: `<p>You have a contact form submission</p><br>
-        <p><strong>Email: </strong> ${email}</p><br>
-        <p><strong>Message: </strong> ${message}</p><br>
-      `
+  transporter
+    .sendMail({
+      from: "chieu.dang@stunited.vn",
+      to: "chieu.dang@stunited.vn",
+      subject: `Message From ${req.body.email}`,
+      html: `<div>${req.body.message}</div><p>Sent from:
+       ${req.body.email}</p><p>Message:
+       ${req.body.message}</p>`,
+    })
+    .then((res) => {
+      res.status(200);
+    })
+    .catch((err) => {
+      res.send(err);
     });
-  } catch (error) {
-    return res.status(500).json({ error: error.message || error.toString() });
-  }
-  return res.status(200).json({ error: "" });
-};
+}

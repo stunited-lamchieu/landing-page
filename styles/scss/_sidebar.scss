@@ -1,13 +1,14 @@
 @use "../custom" as *;
 
 .navigation {
-  width: fit-content;
+  width: 170px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: fixed;
   counter-reset: number;
-  margin: 10rem 0;
+  height: 100%;
+  z-index: 150;
 
   ul {
     list-style: none;

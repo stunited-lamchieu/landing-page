@@ -16,9 +16,9 @@
     font-size: 1.5rem;
     width: 3rem;
     height: 3rem;
-    line-height: 3rem;
-    text-align: center;
     align-items: center;
     stroke: #fff;
+    display: flex;
+    justify-content: center;
   }
 }

@@ -4,12 +4,10 @@
   position: fixed;
   top: 0;
   z-index: 99;
-  background: rgb(17 21 41 / 70%);
+  background: #06072bbd;
   left: 0;
   right: 0;
-  overflow: hidden;
-  padding: 2% 52px;
-
+  height: 70px;
   &__logo {
     width: 4rem;
     height: 4rem;

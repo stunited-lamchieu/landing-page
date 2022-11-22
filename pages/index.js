@@ -6,17 +6,16 @@ import About from "../components/About";
 import Services from "../components/Services";
 import { BsFillArchiveFill } from "react-icons/bs";
 import { MdWebAsset } from "react-icons/md";
-import { AiOutlineMobile, AiOutlineTeam } from "react-icons/ai"
-import { SiBmcsoftware } from "react-icons/si"
-import { MdOutlineCampaign } from "react-icons/md"
-import { GrStreetView } from "react-icons/gr"
+import { AiOutlineMobile, AiOutlineTeam } from "react-icons/ai";
+import { SiBmcsoftware } from "react-icons/si";
+import { MdOutlineCampaign } from "react-icons/md";
+import { GrStreetView } from "react-icons/gr";
 
 const Home = () => {
   const navigations = [
     { name: "Home", href: "#introduce" },
     { name: "About", href: "#about" },
     { name: "Services", href: "#services" },
-    { name: "Projects", href: "#project" },
     { name: "Contact", href: "#contact" },
   ];
 
@@ -61,7 +60,7 @@ const Home = () => {
 
   return (
     <div
-      className="container-fluid scrollspy  p-3 rounded-2 "
+      className="scrollspy"
       data-bs-spy="scroll"
       data-bs-target="#navbar-example2"
       data-bs-root-margin="0px 0px -40%"
@@ -69,16 +68,12 @@ const Home = () => {
       tabIndex="0"
     >
       <Header />
-      <div className="row">
-        <div className="col-2 d-flex ">
-          <Sidebar navigations={navigations} />
-        </div>
-        <div className="col-10">
-          <Introduce id="introduce" className="section" />
-          <About id="about" />
-          <Services id="services" services={services} />
-          <Contact id="contact" className="section" />
-        </div>
+      <Sidebar navigations={navigations} />
+      <div>
+        <Introduce id="introduce" className="section" />
+        <About id="about" />
+        <Services id="services" services={services} />
+        <Contact id="contact" className="section" />
       </div>
 
       <script
