@@ -1,11 +1,7 @@
 import Image from "next/image";
 import logo1 from "../images/logo1.png";
 import Typed from "react-typed";
-import {
-  BsStar,
-  BsStars,
-  BsChevronDoubleDown,
-} from "react-icons/bs";
+import { BsStar, BsStars, BsChevronDoubleDown } from "react-icons/bs";
 
 const Introduce = (props) => {
   const { id } = props;
@@ -15,15 +11,9 @@ const Introduce = (props) => {
         <div className="heading">
           <div className="grid"></div>
           <h1>
-            <span>ST UNITED</span>
+            <span>ST UNITED</span> SAY &quot;HI&quot;
           </h1>
-          <Typed
-            className="typed"
-            strings={["United to grow up together..."]}
-            typeSpeed={30}
-            backSpeed={50}
-            loop
-          />
+          <div className="sub__title">United to grow up together</div>
         </div>
       </div>
       <div className="shake">
