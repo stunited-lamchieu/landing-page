@@ -4,12 +4,11 @@ import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
 import About from "../components/About";
 import Services from "../components/Services";
-import { BsFillArchiveFill } from "react-icons/bs";
 import { MdWebAsset } from "react-icons/md";
 import { AiOutlineMobile, AiOutlineTeam } from "react-icons/ai";
 import { SiBmcsoftware } from "react-icons/si";
 import { MdOutlineCampaign } from "react-icons/md";
-import { GrStreetView } from "react-icons/gr";
+import { BiBuildingHouse } from "react-icons/bi";
 
 const Home = () => {
   const navigations = [
@@ -51,7 +50,7 @@ const Home = () => {
         "From establishing your online presence to increasing your influence on social, we use smart analytics to help you grow your business.",
     },
     {
-      icon: <GrStreetView className="icon" />,
+      icon: <BiBuildingHouse className="icon" />,
       title: "Startup Incubation",
       content:
         "Our program provides a vast resources for entrepreneurs in Vietnam, focusing on ecosystem building, co-working spaces and incubation programs",

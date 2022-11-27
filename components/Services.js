@@ -3,6 +3,9 @@ const Services = (props) => {
 
   return (
     <div className="container-fluid" id={id}>
+      <h2 className="text-center title text-uppercase">
+        OUR <span>SERVICES</span>
+      </h2>
       <div className="row">
         {services.map((service, index) => {
           return (

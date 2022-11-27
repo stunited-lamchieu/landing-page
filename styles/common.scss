@@ -1,0 +1,66 @@
+@use "./custom" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+input,
+textarea,
+select,
+button {
+  outline: none;
+}
+
+input {
+  line-height: normal;
+}
+
+label,
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  position: relative;
+  background-color: #06072b;
+  color: #fffbfbc9;
+}
+
+.scrollspy {
+  position: relative;
+  height: 100vh;
+  overflow: auto;
+}
+
+.section {
+  height: 100vh;
+}
+
+.title {
+  span {
+    text-transform: uppercase;
+    background: linear-gradient(60deg, #3d73eb 13.4%, #de8fff 86.6%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap");

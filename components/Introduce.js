@@ -1,6 +1,5 @@
 import Image from "next/image";
 import logo1 from "../images/logo1.png";
-import Typed from "react-typed";
 import { BsStar, BsStars, BsChevronDoubleDown } from "react-icons/bs";
 
 const Introduce = (props) => {
