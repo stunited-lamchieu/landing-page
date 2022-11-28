@@ -9,6 +9,7 @@ import { AiOutlineMobile, AiOutlineTeam } from "react-icons/ai";
 import { SiBmcsoftware } from "react-icons/si";
 import { MdOutlineCampaign } from "react-icons/md";
 import { BiBuildingHouse } from "react-icons/bi";
+import Map from "../components/Map";
 
 const Home = () => {
   const navigations = [
@@ -72,6 +73,7 @@ const Home = () => {
         <Introduce id="introduce" className="section" />
         <About id="about" />
         <Services id="services" services={services} />
+        <Map id="map" />
         <Contact id="contact" className="section" />
       </div>
 

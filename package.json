@@ -18,7 +18,8 @@
     "nodemailer": "^6.8.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-icons": "^4.6.0"
+    "react-icons": "^4.6.0",
+    "react-simple-maps": "2.3.0"
   },
   "devDependencies": {
     "eslint": "8.26.0",

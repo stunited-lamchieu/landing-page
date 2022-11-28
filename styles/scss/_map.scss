@@ -1,0 +1,11 @@
+.map {
+  padding-left: 170px;
+  .description {
+    padding-left: 40px;
+    span {
+      background: -webkit-linear-gradient(60deg, #3d73eb 13.4%, #de8fff 86.6%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
