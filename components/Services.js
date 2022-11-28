@@ -3,7 +3,7 @@ const Services = (props) => {
 
   return (
     <div className="container-fluid" id={id}>
-      <h2 className="text-center title text-uppercase">
+      <h2 className="text-center header__title text-uppercase">
         OUR <span>SERVICES</span>
       </h2>
       <div className="row">

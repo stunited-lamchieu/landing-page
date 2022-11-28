@@ -54,7 +54,7 @@ const Contact = (props) => {
             <span className="visually-hidden">Loading...</span>
           </div>
         )}
-        <h2 className="text-center title text-uppercase">
+        <h2 className="text-center header__title text-uppercase">
           <span>CONTACT</span> US
         </h2>
         <div className="col-4 contact__info">

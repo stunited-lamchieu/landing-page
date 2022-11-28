@@ -1,0 +1,25 @@
+@use "../custom" as *;
+
+.solution {
+  display: flex;
+
+  &__content {
+    width: 50%;
+
+    .content__main {
+      display: flex;
+      align-items: baseline;
+
+      .content__icon {
+        font-size: 1.5rem;
+        width: 3rem;
+        height: 3rem;
+        padding-right: 1rem;
+      }
+
+      .title {
+        color: #9b8bf9;
+      }
+    }
+  }
+}

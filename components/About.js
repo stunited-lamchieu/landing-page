@@ -51,7 +51,7 @@ const About = (props) => {
 
   return (
     <div className="container-fluid about-container" id={id}>
-      <h2 className="text-center title text-uppercase">
+      <h2 className="text-center header__title text-uppercase">
         <span>ABOUT</span> US
       </h2>
       {slideNumber <= 1 ? (
