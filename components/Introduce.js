@@ -1,18 +1,39 @@
-import Image from "next/image";
-import logo1 from "../images/logo1.png";
-import { BsStar, BsStars, BsChevronDoubleDown } from "react-icons/bs";
+import Image from 'next/image'
+import logo1 from '../images/logo1.png'
+import Typed from 'react-typed'
+import { BsStar, BsStars, BsChevronDoubleDown } from 'react-icons/bs'
+import Link from 'next/link'
+import { FaFacebookF } from 'react-icons/fa'
+import { ImLinkedin2 } from 'react-icons/im'
+import { MdModeEdit } from 'react-icons/md'
 
-const Introduce = (props) => {
-  const { id } = props;
-  return (
-    <div id={id} className="hero">
+const Introduce = () => (
+  <div className="introduce">
+    <div className="grid"></div>
+    <div className="section introduce__section">
       <div className="wrapper">
         <div className="heading">
-          <div className="grid"></div>
           <h1>
-            <span>ST UNITED</span> SAY &quot;HI&quot;
+            <span>ST UNITED</span>
           </h1>
-          <div className="sub__title">United to grow up together</div>
+          <Typed className="typed" strings={['United to grow up together...']} typeSpeed={30} backSpeed={50} loop />
+          <div className="social">
+            <Link href="#">
+              <a target="_blank">
+                <FaFacebookF />
+              </a>
+            </Link>
+            <Link href="#">
+              <a target="_blank">
+                <ImLinkedin2 />
+              </a>
+            </Link>
+            <Link href="#">
+              <a target="_blank">
+                <MdModeEdit />
+              </a>
+            </Link>
+          </div>
         </div>
       </div>
       <div className="shake">
@@ -28,11 +49,8 @@ const Introduce = (props) => {
           <Image src={logo1} alt="logo" layout="fill" />
         </div>
       </div>
-      <div className="scroll_down">
-        <BsChevronDoubleDown />
-      </div>
     </div>
-  );
-};
+  </div>
+)
 
-export default Introduce;
+export default Introduce

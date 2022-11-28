@@ -1,7 +1,3 @@
-@use "./custom" as *;
-
-@import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap");
-
 * {
   margin: 0;
   padding: 0;
@@ -40,8 +36,10 @@ img {
 
 body {
   position: relative;
-  background-color: #06072b;
+  background: #06072b;
   color: #fffbfbc9;
+  font-family: 'Poppins';
+  overflow: hidden;
 }
 
 .scrollspy {
@@ -49,18 +47,23 @@ body {
   height: 100vh;
   overflow: auto;
 }
-
 .section {
-  height: 100vh;
-}
+  width: 100%;
+  padding: 40px 20px;
+  max-width: 1366px;
+  margin: 0 auto;
+  @media screen and (max-width: 1366px) {
+    padding: 40px 20px 40px 170px;
+  }
 
-.title {
-  span {
-    text-transform: uppercase;
-    background: linear-gradient(60deg, #3d73eb 13.4%, #de8fff 86.6%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  &__heading {
+    margin: 20px 0 30px 0;
+    text-align: center;
+    span {
+      text-transform: uppercase;
+      background: linear-gradient(60deg, #3d73eb 13.4%, #de8fff 86.6%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
   }
 }
-
-@import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap");
