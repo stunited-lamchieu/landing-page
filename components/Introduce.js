@@ -7,8 +7,8 @@ import { FaFacebookF } from 'react-icons/fa'
 import { ImLinkedin2 } from 'react-icons/im'
 import { MdModeEdit } from 'react-icons/md'
 
-const Introduce = () => (
-  <div className="introduce">
+const Introduce = ({ id }) => (
+  <div className="introduce" id={id}>
     <div className="grid"></div>
     <div className="section introduce__section">
       <div className="wrapper">

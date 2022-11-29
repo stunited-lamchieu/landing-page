@@ -46,7 +46,7 @@ const Contact = (props) => {
   }
 
   return (
-    <div className="contact section">
+    <div className="contact section" id={id}>
       {submit && (
         <div className="spinner-border" role="status">
           <span className="visually-hidden">Loading...</span>

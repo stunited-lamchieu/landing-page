@@ -1,6 +1,1 @@
-export const NAVIGATIONS = [
-  { name: 'Home', href: '#introduce' },
-  { name: 'About', href: '#about' },
-  { name: 'Services', href: '#services' },
-  { name: 'Contact', href: '#contact' },
-]
+export const NAVIGATIONS = ['introduce', 'about', 'services', 'projects', 'contact']
