@@ -1,4 +1,8 @@
 .services {
+  &__start {
+    font-weight: bold;
+  }
+
   &__container {
     --f-columns: 3;
     --f-gap: 30px;

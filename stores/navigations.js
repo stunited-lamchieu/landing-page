@@ -1,1 +1,1 @@
-export const NAVIGATIONS = ['introduce', 'about', 'services', 'projects', 'contact']
+export const NAVIGATIONS = ['introduce', 'about', 'services', 'projects', 'solutions', 'contact']
