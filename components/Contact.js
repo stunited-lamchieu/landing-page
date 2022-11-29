@@ -47,15 +47,15 @@ const Contact = (props) => {
 
   return (
     <div className="contact section" id={id}>
-      {submit && (
-        <div className="spinner-border" role="status">
-          <span className="visually-hidden">Loading...</span>
-        </div>
-      )}
-      <div className="section__heading">
+      <div className="section__heading section__loading">
         <h2>
           <span>CONTACT</span> US
         </h2>
+        {submit && (
+          <div className="lds-heart ">
+            <div></div>
+          </div>
+        )}
       </div>
       <div className="contact__form--wrap">
         <div className="contact__info">
