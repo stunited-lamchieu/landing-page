@@ -1,25 +1,28 @@
-@use "../custom" as *;
-
-.header {
+header {
   position: fixed;
   top: 0;
   z-index: 99;
-  background: #06072bbd;
+  background: transparent;
   left: 0;
   right: 0;
   height: 70px;
-  &__logo {
-    width: 4rem;
-    height: 4rem;
-    position: relative;
-  }
+  padding: 20px 40px 0 20px;
+  display: flex;
+  justify-content: space-between;
+  .header {
+    &__logo {
+      width: 4rem;
+      height: 4rem;
+      position: relative;
+    }
 
-  &__contact {
-    background-image: linear-gradient(to right, #3d73eb, #de8fff 100%);
-    border: none;
-    padding: 0.6rem 1.2rem;
-    color: #ffffff;
-    font-weight: 500;
-    border-radius: 7px;
+    &__contact {
+      background-image: linear-gradient(to right, #3d73eb, #de8fff 100%);
+      border: none;
+      padding: 6px 10px;
+      color: #ffffff;
+      font-weight: 500;
+      border-radius: 7px;
+    }
   }
 }
