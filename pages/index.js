@@ -5,7 +5,7 @@ import Sidebar from '../components/Sidebar'
 import Social from '../components/Social'
 import About from '../components/About'
 import Services from '../components/Services'
-import Map from '../components/Map'
+import Projects from '../components/Projects'
 import { TIMELINES } from '../stores/timelines'
 import { SERVICES } from '../stores/services'
 import { NAVIGATIONS } from '../stores/navigations'
@@ -31,7 +31,7 @@ const Home = () => {
             <Introduce id="introduce" />
             <About id="about" timelines={TIMELINES} />
             <Services id="services" services={SERVICES} />
-            <Map id="projects" />
+            <Projects id="projects" />
             <Contact id="contact" />
           </div>
         </>

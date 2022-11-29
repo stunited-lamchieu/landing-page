@@ -2,20 +2,22 @@ import { ComposableMap, Geographies, Geography, Marker } from 'react-simple-maps
 import { MAPS } from '../stores/maps'
 import { PROJECTS } from '../stores/projects'
 
-const Map = ({ id }) => (
-  <div className="section map" id={id}>
+const Projects = ({ id }) => (
+  <div className="section projects" id={id}>
     <div className="section__heading">
       <h2>
-        WE <span>PROJECTS</span>
+        OUR <span>PROJECTS</span>
       </h2>
     </div>
     <div className="description">
       The <span className="here">projects</span> we have been working on you can check, my engineer works :
     </div>
-    <ComposableMap width="1200" height="500">
+    <ComposableMap width="1200" height="550">
       <Geographies geography={MAPS}>
         {({ geographies }) =>
-          geographies.map((geo) => <Geography key={geo.rsmKey} geography={geo} fill="#333" stroke="#222" />)
+          geographies.map((geo) => (
+            <Geography key={geo.rsmKey} geography={geo} fill="rgba(255, 255, 255, 0.3)" stroke="rgba(0, 0, 0, 0.1)" />
+          ))
         }
       </Geographies>
       {PROJECTS.map(({ name, coordinates, markerOffset }) => (
@@ -48,12 +50,7 @@ const Map = ({ id }) => (
             <circle cx="12" cy="10" r="3" />
             <path d="M12 21.7C17.3 17 20 13 20 10a8 8 0 1 0-16 0c0 3 2.7 6.9 8 11.7z" />
           </g>
-          <text
-            textAnchor="middle"
-            y={markerOffset}
-            className="abc"
-            // style={{ fontFamily: 'system-ui', fill: '#5D5A6D' }}
-          >
+          <text textAnchor="middle" y={markerOffset} className="abc" style={{ fontFamily: 'system-ui', fill: '#FFF' }}>
             {name}
           </text>
         </Marker>
@@ -62,4 +59,4 @@ const Map = ({ id }) => (
   </div>
 )
 
-export default Map
+export default Projects

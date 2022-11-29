@@ -20,7 +20,7 @@ export const PROJECTS = [
     coordinates: [112.3, 2.3],
   },
   {
-    markerOffset: 30,
+    markerOffset: 40,
     name: 'England',
     coordinates: [2, 54],
   },

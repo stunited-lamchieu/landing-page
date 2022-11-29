@@ -2,7 +2,7 @@ const Services = ({ id, services }) => (
   <div className="services section" id={id}>
     <div className="section__heading">
       <h2>
-        WE <span>SERVICES</span>
+        OUR <span>SERVICES</span>
       </h2>
     </div>
     <div className="services__container">
