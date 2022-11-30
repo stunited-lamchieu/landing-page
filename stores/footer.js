@@ -13,6 +13,6 @@ export const FOOTER = [
   },
   {
     icon: <HiOutlineLocationMarker className="icon" />,
-    title: '116 - 119 Mai Thúc Liêm, Sơn Trà, Đà Nẵng',
+    title: '116 - 118 Mai Thúc Liêm, Sơn Trà, Đà Nẵng',
   },
 ]

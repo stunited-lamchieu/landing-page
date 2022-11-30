@@ -6,10 +6,7 @@ const Header = () => (
     <div className="header__logo">
       <Image src={logo} alt="logo" layout="fill" />
     </div>
-    <a href="#contact">
-      {' '}
-      <button className="header__contact">Contact Us </button>{' '}
-    </a>
+    <button className="header__contact">Contact Us</button>
   </header>
 )
 
