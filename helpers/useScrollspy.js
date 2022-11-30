@@ -1,31 +1,31 @@
-import { useLayoutEffect, useState } from 'react'
+import {useState, useEffect} from 'react'
 
-export const useScrollspy = (ids, offset = 0) => {
+export const useScrollspy = (navigations, offset = 0) => {
   const [activeId, setActiveId] = useState('')
 
   const clamp = (value) => Math.max(0, value)
 
   const isBetween = (value, floor, ceil) => value >= floor && value <= ceil
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const listener = () => {
       const scroll = window.pageYOffset
 
-      const position = ids
-        .map((id) => {
-          const element = document.getElementById(id)
+      const position = navigations
+        .map((navigation) => {
+          const element = document.getElementById(navigation)
 
-          if (!element) return { id, top: -1, bottom: -1 }
+          if (!element) return { navigation, top: -1, bottom: -1 }
 
           const rect = element.getBoundingClientRect()
           const top = clamp(rect.top + scroll - offset)
           const bottom = clamp(rect.bottom + scroll - offset)
 
-          return { id, top, bottom }
+          return { navigation, top, bottom }
         })
         .find(({ top, bottom }) => isBetween(scroll, top, bottom))
 
-      setActiveId(position?.id || '')
+      setActiveId(position?.navigation || '')
     }
 
     listener()
@@ -37,7 +37,7 @@ export const useScrollspy = (ids, offset = 0) => {
       window.removeEventListener('resize', listener)
       window.removeEventListener('scroll', listener)
     }
-  }, [ids, offset])
+  }, [navigations, offset])
 
   return activeId
 }
