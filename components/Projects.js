@@ -1,9 +1,8 @@
 import { ComposableMap, Geographies, Geography, Marker } from 'react-simple-maps'
 import { MAPS } from '../stores/maps'
-import { PROJECTS } from '../stores/projects'
 import { HiOutlineLocationMarker } from 'react-icons/hi'
 
-const Projects = ({ id }) => (
+const Projects = ({ id, projects }) => (
   <div className="section projects" id={id}>
     <div className="section__heading">
       <h2>
@@ -25,7 +24,7 @@ const Projects = ({ id }) => (
           ))
         }
       </Geographies>
-      {PROJECTS.map(({ name, coordinates, markerOffset }) => (
+      {projects.map(({ name, coordinates, markerOffset }) => (
         <Marker
           key={name}
           coordinates={coordinates}

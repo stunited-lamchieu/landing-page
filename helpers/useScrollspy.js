@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react'
+import { useState, useEffect } from 'react'
 
 export const useScrollspy = (navigations, offset = 0) => {
   const [activeId, setActiveId] = useState('')
