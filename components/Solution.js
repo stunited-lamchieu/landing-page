@@ -1,6 +1,5 @@
-const Solution = ({ id, solutions }) => {
-  return (
-    <div className="services section" id={id}>
+const Solution = ({ id, solutions }) => (
+    <div className="section" id={id}>
       <div className="section__heading">
         <h2>
           OUR <span>SOLUTIONS</span>
@@ -8,19 +7,18 @@ const Solution = ({ id, solutions }) => {
       </div>
       <div className="solution">
         <div className="solution__container">
-          {solutions.map((solution, index) => {
-            return (
+          {solutions.map((solution, index) =>  (
               <div key={index} className="content__main">
                 <div className="content__icon">{solution.icon}</div>
-                <span className="font-weight-bold title">{solution.title}</span>
-                <p className="py-3">{solution.content}</p>
+                <span className="title">{solution.title}</span>
+                <p>{solution.content}</p>
               </div>
             )
-          })}
+          )}
         </div>
       </div>
     </div>
   )
-}
+
 
 export default Solution

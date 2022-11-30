@@ -1,11 +1,11 @@
 import Image from 'next/image'
-import logo1 from '../images/logo1.png'
-import Typed from 'react-typed'
-import { BsStar, BsStars, BsChevronDoubleDown } from 'react-icons/bs'
 import Link from 'next/link'
+import { BsStar, BsStars } from 'react-icons/bs'
 import { FaFacebookF } from 'react-icons/fa'
 import { ImLinkedin2 } from 'react-icons/im'
 import { MdModeEdit } from 'react-icons/md'
+import Typed from 'react-typed'
+import logo1 from '../images/logo1.png'
 
 const Introduce = ({ id }) => (
   <div className="introduce" id={id}>
@@ -46,7 +46,7 @@ const Introduce = ({ id }) => (
           <div className="small_star">
             <BsStars />
           </div>
-          <Image src={logo1} alt="logo" layout="fill" />
+          <Image src={logo1} alt="ST United" layout="fill" />
         </div>
       </div>
     </div>
