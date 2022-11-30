@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-const Contact = (props) => {
+const Contact = ({ id, footer }) => {
   const [values, setValues] = useState({
     email: '',
     message: '',
@@ -10,8 +10,6 @@ const Contact = (props) => {
   const { email, message } = values
 
   const handleChange = (e) => setValues({ ...values, [e.target.name]: e.target.value })
-
-  const { id } = props
 
   const handleOnSubmit = (e) => {
     e.preventDefault()
@@ -82,6 +80,17 @@ const Contact = (props) => {
             </button>
           </form>
         </div>
+      </div>
+
+      <div className="contact__footer">
+        {footer.map((item, index) => {
+          return (
+            <div key={index} className="content__main">
+              <span className="content__icon">{item.icon}</span>
+              <span className="title">{item.title}</span>
+            </div>
+          )
+        })}
       </div>
     </div>
   )

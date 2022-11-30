@@ -1,26 +1,23 @@
 .navigations {
-  width: fit-content;
-  height: 100vh;
+  width: 170px;
   display: flex;
   justify-content: center;
   align-items: center;
   position: fixed;
   counter-reset: number;
-  margin: 0 20px;
+  height: 100%;
+  z-index: 150;
 
   ul {
     list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    gap: 20px;
 
     li {
       padding: 9px 0;
       position: relative;
-      cursor: pointer;
 
       span {
         display: block;

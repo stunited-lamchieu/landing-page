@@ -6,6 +6,7 @@
     flex-wrap: wrap;
     margin-left: calc(-1 * var(--f-gap));
     margin-bottom: calc(-1 * var(--f-gap));
+
     .content__main {
       margin-left: var(--f-gap);
       margin-bottom: var(--f-gap);
@@ -19,7 +20,7 @@
       }
 
       .title {
-        color: #9b8bf9;
+        color: #5c49cd;
         font-weight: bold;
       }
 
