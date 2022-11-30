@@ -59,7 +59,7 @@ const Contact = ({ id, footer }) => {
         <div className="contact__info">
           <p>We also have many dificulties in accessing new markets and that is also out next challenge.</p>
           <p>
-            We're so pround of all the people at STUNITED who have accompanied over the years and thanks to all the
+            We&apos;re so pround of all the people at STUNITED who have accompanied over the years and thanks to all the
             companies and individual parents of STUNITED.
           </p>
           <p>All good and bad information are accepted. Have a good day Madam, Sir!</p>
