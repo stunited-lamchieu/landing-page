@@ -12,7 +12,7 @@ const Projects = ({ id }) => (
     <div className="description">
       The <span className="here">projects</span> we have been working on you can check, my engineer works :
     </div>
-    <ComposableMap width="1200" height="550">
+    <ComposableMap width={1200} height={550}>
       <Geographies geography={MAPS}>
         {({ geographies }) =>
           geographies.map((geo) => (
