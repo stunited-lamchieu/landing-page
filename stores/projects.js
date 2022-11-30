@@ -1,7 +1,7 @@
 export const PROJECTS = [
   {
     markerOffset: -50,
-    name: 'Franch',
+    name: 'France',
     coordinates: [2, 46],
   },
   {

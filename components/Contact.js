@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-const Contact = (props) => {
+const Contact = ({ id, footer }) => {
   const [values, setValues] = useState({
     email: '',
     message: '',
@@ -10,8 +10,6 @@ const Contact = (props) => {
   const { email, message } = values
 
   const handleChange = (e) => setValues({ ...values, [e.target.name]: e.target.value })
-
-  const { id } = props
 
   const handleOnSubmit = (e) => {
     e.preventDefault()
@@ -47,15 +45,15 @@ const Contact = (props) => {
 
   return (
     <div className="contact section" id={id}>
-      {submit && (
-        <div className="spinner-border" role="status">
-          <span className="visually-hidden">Loading...</span>
-        </div>
-      )}
-      <div className="section__heading">
+      <div className="section__heading section__loading">
         <h2>
           <span>CONTACT</span> US
         </h2>
+        {submit && (
+          <div className="lds-heart ">
+            <div></div>
+          </div>
+        )}
       </div>
       <div className="contact__form--wrap">
         <div className="contact__info">
@@ -82,6 +80,17 @@ const Contact = (props) => {
             </button>
           </form>
         </div>
+      </div>
+
+      <div className="contact__footer">
+        {footer.map((item, index) => {
+          return (
+            <div key={index} className="content__main">
+              <span className="content__icon">{item.icon}</span>
+              <span className="title">{item.title}</span>
+            </div>
+          )
+        })}
       </div>
     </div>
   )

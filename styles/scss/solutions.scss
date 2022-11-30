@@ -1,0 +1,32 @@
+.solution {
+  &__container {
+    --f-columns: 2;
+    --f-gap: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(-1 * var(--f-gap));
+    margin-bottom: calc(-1 * var(--f-gap));
+
+    .content__main {
+      margin-left: var(--f-gap);
+      margin-bottom: var(--f-gap);
+      width: calc((100% / var(--f-columns) - var(--f-gap)));
+
+      .content__icon {
+        font-size: 1.5rem;
+        width: 3rem;
+        height: 3rem;
+        padding-right: 1rem;
+      }
+
+      .title {
+        color: #5c49cd;
+        font-weight: bold;
+      }
+
+      p {
+        padding-top: 1rem;
+      }
+    }
+  }
+}

@@ -3,7 +3,7 @@ header {
   top: 0;
   z-index: 99;
   background: transparent;
-  left: 0;
+  left: 31px;
   right: 0;
   height: 70px;
   padding: 20px 40px 0 20px;
@@ -19,10 +19,12 @@ header {
     &__contact {
       background-image: linear-gradient(to right, #3d73eb, #de8fff 100%);
       border: none;
-      padding: 6px 10px;
+      padding: 0 1.5rem;
       color: #ffffff;
-      font-weight: 500;
-      border-radius: 7px;
+      font-weight: 700;
+      font-size: 16px;
+      border-radius: 5px;
+      height: 100%
     }
   }
 }

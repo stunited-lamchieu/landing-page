@@ -6,9 +6,12 @@ import Social from '../components/Social'
 import About from '../components/About'
 import Services from '../components/Services'
 import Projects from '../components/Projects'
+import Solutions from '../components/Solution'
 import { TIMELINES } from '../stores/timelines'
 import { SERVICES } from '../stores/services'
+import { SOLUTIONS } from '../stores/solutions'
 import { NAVIGATIONS } from '../stores/navigations'
+import { FOOTER } from '../stores/footer'
 import { useEffect, useState } from 'react'
 import { useScrollspy } from '../helpers/useScrollspy'
 
@@ -32,7 +35,8 @@ const Home = () => {
             <About id="about" timelines={TIMELINES} />
             <Services id="services" services={SERVICES} />
             <Projects id="projects" />
-            <Contact id="contact" />
+            <Solutions id="solutions" solutions={SOLUTIONS} />
+            <Contact id="contact" footer={FOOTER} />
           </div>
         </>
       )}
