@@ -9,9 +9,7 @@ const Projects = ({ id }) => (
         OUR <span>PROJECTS</span>
       </h2>
     </div>
-    <div className="description">
-      The <span className="here">projects</span> we have been working on you can check, my engineer works :
-    </div>
+    <div className="description">The projects we have been working on you can check, my engineer works :</div>
     <ComposableMap width={1200} height={550}>
       <Geographies geography={MAPS}>
         {({ geographies }) =>
@@ -32,6 +30,9 @@ const Projects = ({ id }) => (
             hover: {
               fill: '#F53',
               outline: 'none',
+            },
+            focus: {
+              outline: 'none !important',
             },
             pressed: {
               fill: '#E42',

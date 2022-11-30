@@ -11,6 +11,7 @@ import { TIMELINES } from '../stores/timelines'
 import { SERVICES } from '../stores/services'
 import { SOLUTIONS } from '../stores/solutions'
 import { NAVIGATIONS } from '../stores/navigations'
+import { FOOTER } from '../stores/footer'
 import { useEffect, useState } from 'react'
 import { useScrollspy } from '../helpers/useScrollspy'
 
@@ -35,7 +36,7 @@ const Home = () => {
             <Services id="services" services={SERVICES} />
             <Projects id="projects" />
             <Solutions id="solutions" solutions={SOLUTIONS} />
-            <Contact id="contact" />
+            <Contact id="contact" footer={FOOTER} />
           </div>
         </>
       )}

@@ -6,12 +6,12 @@ import { MdModeEdit } from 'react-icons/md'
 const SocialBar = () => {
   return (
     <div className="social_bar">
-      <Link href="#">
+      <Link href="https://www.facebook.com/stunited.vn">
         <a target="_blank">
           <FaFacebookF />
         </a>
       </Link>
-      <Link href="#">
+      <Link href="https://www.linkedin.com/company/23723130">
         <a target="_blank">
           <ImLinkedin2 />
         </a>
