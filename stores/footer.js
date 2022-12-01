@@ -9,10 +9,10 @@ export const FOOTER = [
   },
   {
     icon: <AiOutlineMail className="icon" />,
-    title: 'info@stdsoftware.com',
+    title: 'hello@stunited.vn',
   },
   {
     icon: <HiOutlineLocationMarker className="icon" />,
-    title: '116 - 118 Mai Thúc Liêm, Sơn Trà, Đà Nẵng',
+    title: '116 - 118 Mai Thúc Lân, Sơn Trà, Đà Nẵng',
   },
 ]

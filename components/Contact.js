@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { SlEmotsmile } from 'react-icons/sl'
 
 const Contact = ({ id, footer }) => {
   const [values, setValues] = useState({
@@ -65,14 +66,14 @@ const Contact = ({ id, footer }) => {
           <p>All good and bad information are accepted. Have a good day Madam, Sir!</p>
         </div>
         <div className="contact__form">
-          <p>If you are looking for manpower. Why not us? You can contact bellow.</p>
+          <p>If you are looking for manpower. Why not us? You can contact bellow <SlEmotsmile/> </p> 
           <form action="/send-data-here" method="post" className=" send__data" onSubmit={handleOnSubmit}>
             <div className="form__item">
               <label htmlFor="email">Email</label>
               <input id="email" type="email" name="email" value={email} required onChange={handleChange} />
             </div>
             <div className="form__item">
-              <label required>Your message:</label>
+              <label required>Your message</label>
               <textarea id="message" type="text" name="message" value={message} required onChange={handleChange} />
             </div>
             <button type="submit" className="button__submit">
