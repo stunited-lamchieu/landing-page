@@ -1,4 +1,3 @@
-const capitalize = (text) => text.charAt(0).toUpperCase() + text.substr(1)
 const Sidebar = ({ navigations, activeId }) => (
   <nav className="navigations">
     <ul>
