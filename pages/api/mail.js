@@ -16,7 +16,7 @@ export default function handler(req, res) {
       from: 'chieu.dang@stunited.vn',
       to: 'chieu.dang@stunited.vn',
       subject: `Message From ${req.body.email}`,
-      html: `<div>${req.body.message}</div><p>Sent from:
+      html: `<p>Sent from:
        ${req.body.email}</p><p>Message:
        ${req.body.message}</p>`,
     })

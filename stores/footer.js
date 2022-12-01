@@ -5,7 +5,7 @@ import { HiOutlineLocationMarker } from 'react-icons/hi'
 export const FOOTER = [
   {
     icon: <AiOutlinePhone className="icon" />,
-    title: '0905 610 229',
+    title: '(+84) 777 463 183',
   },
   {
     icon: <AiOutlineMail className="icon" />,

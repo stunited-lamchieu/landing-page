@@ -17,23 +17,6 @@ const Introduce = ({ id }) => (
             <span>ST UNITED</span>
           </h1>
           <Typed className="typed" strings={['United to grow up together...']} typeSpeed={30} backSpeed={50} loop />
-          <div className="social">
-            <Link href="#">
-              <a target="_blank">
-                <FaFacebookF />
-              </a>
-            </Link>
-            <Link href="#">
-              <a target="_blank">
-                <ImLinkedin2 />
-              </a>
-            </Link>
-            <Link href="#">
-              <a target="_blank">
-                <MdModeEdit />
-              </a>
-            </Link>
-          </div>
         </div>
       </div>
       <div className="shake">
