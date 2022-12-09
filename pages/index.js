@@ -5,7 +5,6 @@ import Header from '../components/Header'
 import Introduce from '../components/Introduce'
 import Projects from '../components/Projects'
 import Services from '../components/Services'
-import Customer from '../components/Customer'
 import Sidebar from '../components/Sidebar'
 import Social from '../components/Social'
 import Solutions from '../components/Solution'
@@ -46,8 +45,7 @@ const Home = () => {
             <Introduce id="introduce" />
             <About id="about" timelines={TIMELINES} />
             <Services id="services" services={SERVICES} />
-            <Customer id="customers" customers={CUSTOMERS} />
-            <Projects id="projects" projects={PROJECTS} />
+            <Projects id="projects" projects={PROJECTS} customers={CUSTOMERS} />
             <Solutions id="solutions" solutions={SOLUTIONS} />
             <Contact id="contact" footer={FOOTER} />
           </div>

@@ -1,12 +1,4 @@
 .projects {
-  .description {
-    span {
-      background: -webkit-linear-gradient(60deg, #3d73eb 13.4%, #de8fff 86.6%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-  }
-
   .geography {
     &:focus {
       outline: none;
@@ -14,6 +6,35 @@
 
     &__icon {
       color: #ff5533;
+    }
+  }
+  .toast {
+    margin: 30px 0;
+    .here {
+      background: -webkit-linear-gradient(60deg, #3d73eb 13.4%, #de8fff 86.6%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+
+.customer {
+  .customer__logo {
+    background-color: #fff;
+    padding: 1rem;
+  }
+
+  .slick-dots li button {
+    &::before {
+      color: #fff;
+      font-size: 0.8rem;
+      padding-top: 1rem;
+    }
+  }
+
+  .slick-dots li.slick-active button {
+    &:before {
+      color: #fff;
     }
   }
 }
