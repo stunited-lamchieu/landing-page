@@ -8,15 +8,19 @@ export const TIMELINES = [
     content: `2019 once again "ME" became "WE", also young but different, this time WE have the same vision, the same purpose. WE have grown from 20 employees to 40 key employees, working together on typical projects like QANH STARTUP. At the beginning of 2020, WE expanded the market to Europe, and have co-operated with OHO FRANCE.`,
   },
   {
-    year: `2020-2021`,
+    year: 2020,
+    content: `2020 is a successful year as "We" scale up and establish ST SOFWARE into its ecosystem.`,
+  },
+  {
+    year: 2021,
     content: `2021 establishes a Dev-Plus course to train all skills that are not learned in school and provide the best DEVPER for PREODER businesses that have signed MOUs.`,
   },
   {
     year: 2022,
-    content: `2022 ST TECH HOUSE established with more than 50 good engineers, full stack. Invest in VIoT solutions, deploy Trung Nam smart city project.`,
+    content: `ST TECH HOUSE established with more than 50 good engineers, full slack. Invest in VIoT solutions, deploy Trung Nam smart city project.`,
   },
   {
     year: 2023,
-    content: `"YOU" are our challenge.`,
-  },
+    content: `"YOU" are our CHALLENGE`,
+  }
 ]

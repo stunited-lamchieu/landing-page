@@ -1,0 +1,21 @@
+.customer {
+  .customer__logo {
+    background-color: #fff;
+    padding: 1rem;
+  }
+
+  .slick-dots li button {
+    &::before {
+      color: #fff;
+      font-size: 0.8rem;
+      padding-top: 1rem;
+    }
+  }
+
+  .slick-dots li.slick-active button {
+    &:before {
+      color: #fff;
+    }
+  }
+
+}
