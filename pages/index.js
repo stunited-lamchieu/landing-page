@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { useEffect, useState } from 'react'
 import About from '../components/About'
 import Contact from '../components/Contact'
 import Header from '../components/Header'
@@ -9,14 +10,13 @@ import Sidebar from '../components/Sidebar'
 import Social from '../components/Social'
 import Solutions from '../components/Solution'
 import { useScrollspy } from '../helpers/useScrollspy'
+import { CUSTOMERS } from '../stores/customers'
 import { FOOTER } from '../stores/footer'
 import { NAVIGATIONS } from '../stores/navigations'
 import { PROJECTS } from '../stores/projects'
 import { SERVICES } from '../stores/services'
 import { SOLUTIONS } from '../stores/solutions'
 import { TIMELINES } from '../stores/timelines'
-import { CUSTOMERS } from '../stores/customers'
-import { useState, useEffect } from 'react'
 
 const Home = () => {
   const activeId = useScrollspy(NAVIGATIONS, 500)

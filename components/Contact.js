@@ -66,7 +66,9 @@ const Contact = ({ id, footer }) => {
           <p>All good and bad information are accepted. Have a good day Madam, Sir!</p>
         </div>
         <div className="contact__form">
-          <p>If you are looking for manpower. Why not us? You can contact bellow <SlEmotsmile/> </p> 
+          <p>
+            If you are looking for manpower. Why not us? You can contact bellow <SlEmotsmile />{' '}
+          </p>
           <form action="/send-data-here" method="post" className=" send__data" onSubmit={handleOnSubmit}>
             <div className="form__item">
               <label htmlFor="email">Email</label>

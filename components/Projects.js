@@ -1,44 +1,42 @@
-import { ComposableMap, Geographies, Geography, Marker } from 'react-simple-maps'
-import { MAPS } from '../stores/maps'
-import { HiOutlineLocationMarker } from 'react-icons/hi'
-import Slider from 'react-slick'
 import Image from 'next/image'
+import { useRef } from 'react'
+import { HiOutlineLocationMarker } from 'react-icons/hi'
+import { ComposableMap, Geographies, Geography, Marker } from 'react-simple-maps'
+import { Navigation } from 'swiper'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { MAPS } from '../stores/maps'
 
 const Projects = ({ id, projects, customers }) => {
-  const settings = {
-    dots: true,
-    infinite: false,
-    arrows: false,
-    speed: 500,
-    slidesToShow: 6,
-    slidesToScroll: 6,
-    initialSlide: 0,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          infinite: true,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
-        },
-      },
+  const navigationPrevRef = useRef(null)
+  const navigationNextRef = useRef(null)
 
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
+  const settings = {
+    slidesPerView: 2,
+    spaceBetween: 20,
+    slidesPerGroup: 3,
+    loop: true,
+    navigation: {
+      prevEl: navigationPrevRef.current,
+      nextEl: navigationNextRef.current,
+    },
+    modules: [Navigation],
+    breakpoints: {
+      640: {
+        slidesPerView: 3,
       },
-    ],
+      768: {
+        slidesPerView: 4,
+      },
+      1024: {
+        slidesPerView: 5,
+      },
+      1400: {
+        slidesPerView: 6,
+      },
+    },
   }
   return (
     <div className="section projects" id={id}>
@@ -104,15 +102,25 @@ const Projects = ({ id, projects, customers }) => {
             <a href="#contact"> Clients &amp; Partners </a>
           </span>
         </div>
-        <Slider id="customer" {...settings}>
+        <div className="swiper_button">
+          <div ref={navigationPrevRef} className="swiper_prev">
+            {' '}
+            Prev
+          </div>
+          <div ref={navigationNextRef} className="swiper_next">
+            {' '}
+            Next
+          </div>
+        </div>
+        <Swiper className="customer-swiper" {...settings}>
           {customers.map((customer, index) => (
-            <div className="customer__logo" key={index}>
+            <SwiperSlide className="customer__logo" key={index}>
               <a href={customer.href}>
                 <Image src={customer.src} alt={customer.alt} width="100" height="100" />
               </a>
-            </div>
+            </SwiperSlide>
           ))}
-        </Slider>
+        </Swiper>
       </div>
     </div>
   )

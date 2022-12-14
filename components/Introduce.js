@@ -1,9 +1,5 @@
 import Image from 'next/image'
-import Link from 'next/link'
 import { BsStar, BsStars } from 'react-icons/bs'
-import { FaFacebookF } from 'react-icons/fa'
-import { ImLinkedin2 } from 'react-icons/im'
-import { MdModeEdit } from 'react-icons/md'
 import Typed from 'react-typed'
 import logo1 from '../images/logo1.png'
 
