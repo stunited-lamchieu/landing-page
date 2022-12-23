@@ -1,0 +1,154 @@
+@media screen and (min-width: 240px) {
+}
+
+@media screen and (min-width: 320px) {
+  header {
+    left: -1%;
+  }
+
+  /* Contact Us */
+  .contact {
+    &__form--wrap {
+      display: block;
+
+      .contact__info,
+      .contact__form {
+        width: 100%;
+        border: 1px solid rgba(255, 255, 255, 0.2392156863);
+
+        &::before,
+        &::after {
+          content: none;
+        }
+      }
+    }
+
+    &__footer {
+      --f-columns: 1;
+    }
+  }
+
+  /* Sidebar */
+  .social_bar {
+    flex-direction: column;
+    left: 3%;
+    bottom: 3%;
+  }
+
+  .navigations {
+    display: none;
+  }
+
+  /* Solution */
+  .solution {
+    &__container {
+      --f-columns: 1;
+    }
+  }
+
+  /* Project */
+  .customer {
+    .customer-swiper {
+      .customer__logo {
+        padding: 0;
+      }
+    }
+  }
+
+  /* Service */
+  .services {
+    &__container {
+      --f-columns: 1;
+    }
+  }
+
+  /* Aboute Us */
+  .about {
+    .wrapper {
+      &:nth-child(even) {
+        width: 100%;
+        left: 0;
+      }
+
+      &.wrapper:nth-child(odd) {
+        width: 100%;
+        left: 0;
+        border-right: none;
+        border-left: 1px solid #eee;
+
+        .date {
+          left: 82px;
+          right: auto;
+        }
+
+        &::before {
+          left: 25px;
+        }
+
+        .content {
+          padding-right: 0;
+          padding-left: 55px;
+          p {
+            text-align: start;
+          }
+        }
+      }
+
+      &::after {
+        left: -17.5px;
+      }
+    }
+  }
+
+  /* Introduce */
+  .introduce {
+    min-height: 70vh;
+    &__section {
+      .shake {
+        .img_wrap {
+          width: 90px;
+          height: 90px;
+        }
+      }
+      .wrapper {
+        padding-left: 0;
+        h1 {
+          span {
+            font-size: 28px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 480px) {
+}
+
+@media screen and (min-width: 768px) {
+}
+
+@media screen and (min-width: 1024px) {
+  // header {
+  //   left: 1%;
+  // }
+
+  // /* Sidebar */
+  // .social_bar {
+  //   flex-direction: column;
+  //   left: 3%;
+  //   bottom: 3%;
+  // }
+
+  // .navigations {
+  //   display: block;
+  //   width: 100px;
+  // }
+
+  // .contact {
+  //   &__footer {
+  //     display: flex;
+  //     --f-columns: 3;
+  //   }
+  // }
+}

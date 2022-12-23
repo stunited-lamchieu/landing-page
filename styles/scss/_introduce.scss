@@ -185,17 +185,6 @@
       }
     }
   }
-
-  @media screen and (max-width: 1024px) {
-    flex-direction: column;
-    justify-content: space-around;
-    .wrapper {
-      .img_wrap {
-        width: 200px;
-        height: 200px;
-      }
-    }
-  }
 }
 
 @keyframes animate {

@@ -89,7 +89,7 @@ const Projects = ({ id, projects, customers }) => {
             >
               <HiOutlineLocationMarker className="geography__icon" />
             </g>
-            <text textAnchor="middle" y={markerOffset} className="abc" style={{ fontSize: '14px', fill: '#FFF' }}>
+            <text textAnchor="middle" y={markerOffset} style={{ fontSize: '14px', fill: '#FFF' }} className="abc">
               {name}
             </text>
           </Marker>

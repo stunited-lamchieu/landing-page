@@ -2,7 +2,7 @@ const About = ({ id, timelines }) => (
   <div className="about section" id={id}>
     <div className="section__heading">
       <h2>
-        ABOUT US <span>ECOSYSTEM</span>
+        OUR <span>STORIES</span>
       </h2>
     </div>
     {timelines.map((timeline, index) => (

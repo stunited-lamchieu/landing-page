@@ -1,4 +1,3 @@
-@use 'common';
 @use 'scss/social';
 @use 'scss/header';
 @use 'scss/sidebar';
@@ -8,3 +7,5 @@
 @use 'scss/projects';
 @use 'scss/solutions';
 @use 'scss/contact';
+@use 'responsive.scss';
+@use 'common';
