@@ -1,6 +1,6 @@
 .solution {
   &__container {
-    --f-columns: 2;
+    --f-columns: 4;
     --f-gap: 30px;
     display: flex;
     flex-wrap: wrap;
@@ -11,6 +11,16 @@
       margin-left: var(--f-gap);
       margin-bottom: var(--f-gap);
       width: calc((100% / var(--f-columns) - var(--f-gap)));
+      box-shadow: 0px 1px 5px 2px rgb(72 79 86 / 50%);
+      padding: 1rem;
+      background-color: #0a0b36;
+      transition: 0.4s ease-out;
+      text-align: -webkit-center;
+
+      &:hover {
+        transform: translateY(-20px);
+        transition: 0.4s ease-out;
+      }
 
       .content__icon {
         font-size: 1.5rem;

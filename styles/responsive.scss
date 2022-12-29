@@ -40,6 +40,12 @@
   .solution {
     &__container {
       --f-columns: 1;
+      .content__main {
+        &:hover {
+          transform: none;
+          transition: 0.4s ease-out;
+        }
+      }
     }
   }
 
@@ -252,7 +258,7 @@
   /* Service */
   .services {
     &__container {
-      --f-columns: 3;
+      --f-columns: 2;
     }
   }
 
@@ -310,6 +316,56 @@
         h1 {
           span {
             font-size: 40px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  /* Solution */
+  .solution {
+    &__container {
+      --f-columns: 4;
+
+      .content__main {
+        &:hover {
+          transform: translateY(-20px);
+          transition: 0.4s ease-out;
+        }
+      }
+    }
+  }
+
+  /* Service */
+  .services {
+    &__container {
+      --f-columns: 3;
+    }
+  }
+
+  /* Sidebar */
+  .social_bar {
+    flex-direction: column;
+    left: 4%;
+  }
+
+  /* Introduce */
+  .introduce {
+    min-height: 100vh;
+    &__section {
+      .shake {
+        .img_wrap {
+          width: 200px;
+          height: 200px;
+        }
+      }
+      .wrapper {
+        padding-left: 100px;
+        h1 {
+          span {
+            font-size: 60px;
           }
         }
       }

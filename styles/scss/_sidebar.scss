@@ -17,7 +17,7 @@
     flex-direction: column;
     gap: 20px;
     li {
-      padding: 9px 0;
+      padding: 7px 0;
       position: relative;
 
       &:last-child {
@@ -64,7 +64,7 @@
 
         &.active::after {
           margin: 6px auto -8px;
-          height: 88px;
+          height: 4rem;
         }
       }
     }

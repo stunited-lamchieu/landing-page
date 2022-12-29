@@ -2,7 +2,7 @@ export const PROJECTS = [
   {
     markerOffset: 10,
     name: 'France',
-    coordinates: [2.349014, 48.864716],
+    coordinates: [5.349014, 44.864716],
   },
   {
     markerOffset: -30,
@@ -12,7 +12,7 @@ export const PROJECTS = [
   {
     markerOffset: -30,
     name: 'Viet Nam',
-    coordinates: [108.277199, 14.058324 ],
+    coordinates: [108.277199, 14.058324],
   },
   {
     markerOffset: -30,
@@ -27,7 +27,7 @@ export const PROJECTS = [
   {
     markerOffset: 10,
     name: 'Australia',
-    coordinates: [151.209900, -33.865143],
+    coordinates: [151.2099, -33.865143],
   },
   {
     markerOffset: -30,
@@ -43,5 +43,5 @@ export const PROJECTS = [
     markerOffset: -30,
     name: 'Bulgaria',
     coordinates: [25.48583, 42.733883],
-  }
+  },
 ]
